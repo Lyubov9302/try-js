@@ -146,35 +146,21 @@
 // console.log(getNumbers(1, 4));
 
 
-
-
-
-
-
-
-
 // 8
 // Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
 // повертати з функції рядок - 'Not a number!'.
 
-function findMin(a,b) {
-if ( typeof a !== 'Number' || b !== 'Number') {
-    return 'Not a number!';
-}
+// function findMin(a,b) {
+// if ( typeof a !== 'Number' || b !== 'Number') {
+//     return 'Not a number!';
+// }
     
-   return Math.min(a, b);
-}
+//    return Math.min(a, b);
+// }
 
 
-console.log(Math.min(i, 1));
-
-
-
-
-
-
-
+// console.log(Math.min(i, 1));
 
 
 
@@ -221,4 +207,9 @@ console.log(Math.min(i, 1));
 // console.log(fizzBuzz(9));
 // console.log(fizzBuzz(10));
 // console.log(fizzBuzz(15));
+
+
+
+
+
 
