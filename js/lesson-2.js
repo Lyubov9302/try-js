@@ -11,11 +11,10 @@
 // const styles = ["jazz", "blues"];
 // styles.push("rock-n-roll");
 // const bluesIndex = styles.indexOf("blues");
-// // if (bluesIndex !== -1) {
+// if (bluesIndex !== -1) {
 //     // styles[bluesIndex] = "classic";
-// //     styles.splice(bluesIndex, 1, "classic");
-// // }
-//  styles[bluesIndex] = "classic";
+//     styles.splice(bluesIndex, 1, "classic");
+// }
 //  console.log(styles);
 
 // function logItems(array) {
@@ -25,6 +24,30 @@
 // }
 
 // logItems(styles);
+
+
+// const movies = ["Titanic", "Avatar", "Inception"];
+// movies.push("Interstellar");
+// const avatarIndex = movies.indexOf("Avatar");
+// if (avatarIndex !== -1) {
+//     movies[avatarIndex] = "The Matrix";
+//     const titanicIndex = movies.indexOf("Titanic");
+//     if (titanicIndex !== -1) {
+//     movies.splice(titanicIndex, 1);
+//     }
+//     console.log(movies);
+//     function logItems(array) {
+//             for (let i = 0; i < array.length; i++) {
+//                 console.log(`${i + 1} - ${array[i]}`);
+//             }
+// }
+// }
+// logItems(movies);
+
+
+
+
+
 
 // Напишіть функцію checkLogin(array), яка:
 // Приймає масив логінів як аргумент.
@@ -196,35 +219,38 @@
 // Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
 // методи sum і mult мають повертати рядок 'No such propeties'
 
-const calculator = {
-   read(a, b) {
-    this.a = a;
-    this.b = b;
-   },
+// const calculator = {
+//    read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//    },
 
-   exist() {
-    return this.a !== undefined && this.b !== undefined;
-   },
+//    exist() {
+//     return this.a !== undefined && this.b !== undefined;
+//    },
 
-    sum() {
-        if (!this.exist()) {
-            return "No such properties";
-        }
-        return this.a + this.b;
-    },
+//     sum() {
+//         if (!this.exist()) {
+//             return "No such properties";
+//         }
+//         return this.a + this.b;
+//     },
 
-    mult() {
-        if (!this.exist()) {
-            return "No such properties";
-        }
-        return this.a + this.b;
-    },
-};
-
-
+//     mult() {
+//         if (!this.exist()) {
+//             return "No such properties";
+//         }
+//         return this.a + this.b;
+//     },
+// };
 
 
-console.dir(calculator);
-calculator.read(5, 10);
-console.log(calculator.exist());
-console.log(calculator.sum());
+
+
+// console.dir(calculator);
+// calculator.read(5, 10);
+// console.log(calculator.exist());
+// console.log(calculator.sum());
+
+
+
