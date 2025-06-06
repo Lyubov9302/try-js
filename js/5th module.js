@@ -60,3 +60,74 @@
 
 
 //   console.log(changeOdd([10, 15, 20, 25], 5));
+
+// 4 - напиши стрілочну функцію getUserNames, яка 
+// - приймає масив обєктів users 
+// - повертає масив імен користувачів (тобто значень властивості name)
+
+// const users = [
+//     { name: "Alice", age: 25 },
+//     { name: "Bob", age: 30 },
+//     { name: "Charlie", age: 28}
+// ];
+ 
+// const getUserNames = (users) => {
+//     return users.map(user => user.name)};
+
+
+// console.log(getUserNames(users));
+
+
+// 5  - Напиши стрілочну функцію getUsersByGender(users, gender), яка:
+// - приймає масив обєктів users;
+// - повертає масив імен користувачів, у яких gender збігається з переданим параметром
+
+
+// const users = [
+//     { name: "Alice", gender: "female" },
+//     { name: "Bob", gender: "male" },
+//     { name: "Eve", gender: "female" }
+// ];
+
+// const getUsersByGender = (users, gender) => {
+//     return users.filter(user => user.gender === gender).map(user => user.name);
+// };
+
+// console.log(getUsersByGender(users, "female"));
+// console.log(getUsersByGender(users, "male"));
+
+// 6 - напиши стрілочну функцію getInactiveUserEmails(users), яка:
+// - приймає масив обєктів users;
+// - повертає масив імейл-адрес користувачів, у яких isActive - false;
+
+// const users = [
+//         { name: "Alice", email: "alice@mail.com", isActive: true },
+//         { name: "Bob",  email: "bob@mail.com", isActive: false },
+//         { name: "Eve",  email: "eve@mail.com", isActive: false }
+
+// ];
+
+// const getInactiveUserEmails = (users) => {
+//     return users.filter( user => user.isActive === false).map(user => user.email);
+// };
+
+// console.log(getInactiveUserEmails(users));
+
+
+
+// 7 - напиши стрілочну функцію getUsersByName(users, name), яка:
+// - приймає масив обєктів users;
+// - повертає обєкт користувача, у якого значення name збігається з другим аргументом 
+
+
+// const users = [
+//     { name: "Alice", age: 25 },
+//     { name: "Bob", age: 30},
+//     { name: "Charlie", age: 28}
+// ];
+
+// const getUsersByName = (users, name) => {
+//     return users.find((user) => user.name === name);
+// };
+
+// console.log(getUsersByName(users, "Alice"));
