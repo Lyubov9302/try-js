@@ -131,3 +131,76 @@
 // };
 
 // console.log(getUsersByName(users, "Alice"));
+
+
+
+
+
+// 8 - у тебе є обєкт GeolocationCoordinates, де ключ - це
+// імя предмета, а значення - оцінка з цього предмета, твоя задача: обчислити середню оцінку
+
+
+// const grades = {
+//     math: 90,
+//     physics: 75,
+//     chemistry: 85,
+//     literature: 80,
+// };
+// 1. отрим. масив оцінок
+// 2.  обчисли загальну суму оцінок
+// 3. обчисли передню оцінку
+
+// const grades = {
+//     math: 90,
+//     physics: 75,
+//     chemistry: 85,
+//     literature: 80,
+// };
+
+// const gradeValues = Object.values(grades);
+
+// const totalSumGrades = gradeValues.reduce((previousValue, number) => {
+//     return previousValue + number;
+// });
+
+// const averageGrade = totalSumGrades / gradeValues.length;
+
+// console.log(averageGrade);
+
+
+// 9 - є масив студентів з оцінками. 
+// Потрібно знайти середню оцінку по всім студентам 
+// викор reduce, щоб знайти суму оцінок
+// і поділити суму на кількість студентів, щоб знайти середню оцінку
+
+
+// const students = [
+//     { name: "Anna", grade: 85 },
+//     { name: "Bohdan", grade: 92 },
+//     { name: "Iryna", grade: 78 },
+//     { name: "Dmytro", grade: 88 },
+// ];
+
+// const averageGrade = students.reduce((num, student) => {
+//     return (num + student.grade);
+// }, 0) / students.length;
+
+
+// 10 - у тебе є масив замовлень. 
+// Кожне замовлення має суму amount.amount
+// Потрібно 
+// обчислити загальну суму всіх замовлень
+
+// const orders = [
+//     { id: 101, amount: 250 },
+//     { id: 102, amount: 400 },
+//     { id: 103, amount: 100 },
+//     { id: 104, amount: 325 },
+//   ];
+
+// const totalOrders = (orders) => {
+//     return orders.reduce((num, order) => num + order.amount, 0)
+// };
+
+
+// console.log(totalOrders(orders));
