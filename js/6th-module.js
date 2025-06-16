@@ -170,7 +170,107 @@
   
 //   const poly = new User();
 //   console.log(poly); // {}
+
+
+// 9 --- створи клас book, який має метод constructor, що приймає
+// три параметри: 
+//  - title 
+//  - author 
+//  - year 
+
+//  клас повинен створювати обєкт з однойменними властивостями:
+//  title, author, year
+
+
+//  class Book {
+//     constructor(title, author, year) {
+//         this.title = title;
+//         this.author = author;
+//         this.year = year;
+//     }
+//  }
   
+
+// 10 --- обєкт параметрів
+// рефакторинг
+
+// Створи клас Product, який має метод constructor, 
+// що приймає один обєкт параметрів з такими властивостями:
+
+// - name - назва товару
+// - price - ціна товару
+// - inStock - чи є товар в наявності (логічне true або false)
+
+
+// class Product {
+//     constructor(params) {
+//         this.name = params.name;
+//         this.price = params.price;
+//         this.inStock = params.inStock;
+//     }
+// }
+
+
+// 11 --- методи класу
+
+// Гра створи своїх героїв 
+// Уявімо, що ти створюєш героїв для компюьерної гри.
+// Кожен герой має імя, рівень та здоровя.
+// Твоє завдання - дописати код
+
+// class Hero {
+//     constructor(params) {
+//         this.name = params.name;
+//         this.level = 1;
+//         this.health = 100;
+//     }
+
+//     getInfo() {
+//     console.log(`Імя: ${this.name}, Рівень: ${this.level}, Здоровя ${this.health}`);
+
+//     }
+
+//     levelUp() {
+//     this.level += 1;
+//     }
+
+//     takeDamage(amount) {
+//     this.health -= amount;
+//     }
+// }
+
+// let hero = new Hero({ name: "Leo"});
+
+// hero.getInfo();
+// hero.levelUp();
+// hero.takeDamage(30);
+// hero.getInfo();
+
+
+// 12 --- приватна властивість
+
+// зроби email приватним у класі user 
+// і створи методи для читання та зміни його значення
+
+// class User {
+//     #email;
+
+//     constructor(params) {
+//         this.#email = params.email;
+//         this.name = params.name;
+//     }
+
+// getEmail() {
+//     return this.#email;
+// }
+
+
+// changeEmail(newEmail) {
+//     this.#email = newEmail;
+// }
+// }
+
+
 
 
 
