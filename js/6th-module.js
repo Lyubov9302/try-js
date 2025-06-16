@@ -1,0 +1,179 @@
+// 1 --- у тебе є обєкт videoPlayer, який зберігає список фільмів і дозволяє запускати обраний фільм.
+// але в методах поки не викор this, хоча це необхідно
+
+// Рефвктори методи так, щоб усі звернення до властивостей і методів обєкта викор this
+
+
+// const videoPlayer = {
+//     movies: ["Inception", "Interstellar", "The Matrix"],
+
+//     hasMovie(movieName) {
+//         return this.movies.includes(movieName);
+//     },
+
+//     play(movieName) {
+//         const available = this.hasMovie(movieName);
+    
+
+//     if (!available) {
+//         return `Movie "${movieName}" is not available.`;
+//     }
+
+//     return `Now playing: "${movieName}"`;
+// }
+// };
+
+
+
+
+// 2 ---- method call ()
+// є функція introduce, яка виводить імя і професію людини. 
+// Але вона не належить жодному обєкту
+
+// 1) Створи 2 обєкти з полями name і job
+// 2) використай метод call, щоб викликати функцію introduce від імені кожного обєкта
+
+
+// function introduce() {
+//     console.log(`Привіт! Я ${this.name}, я працюю як ${this.job}.`);
+// }
+
+// const person1 = {
+//     name: "Олена",
+//     job: "дизайнер"
+// };
+
+
+// const person2 = {
+//     name: "Ігор",
+//     job: "Програміст"
+// };
+
+// introduce.call(person1);
+// introduce.call(person2);
+
+
+// 3 ---- method apply ()
+// є функція greet яка приймає два аргументи: greeting i punctuation
+
+// завдання:
+// 1) створи обєкт user з полем name
+// 2) використай apply, щоб виклик  ф від імені user і передати аргументи
+
+
+// function greet(greeting, punctuation) {
+//     console.log(`${greeting}, я ${this.name}${punctuation}`);
+
+// }
+
+// const user = {
+//     name: "Софія"
+// };
+
+// greet.apply(user, ["Привіт", "!"]);
+
+
+
+// 4 --- method bind
+//  у тебе є обєкт translator, який має метод translate. 
+//  Цей метод повертає привітання з іменем. 
+
+//  завдання:
+//  1) передай метод translate у функцію showGreeting
+//  2) виправ помилку втрати контексту за допомогою .bind 
+
+
+// const translator = {
+//     name: "Марія",
+//     translate() {
+//         return `Привіт, я - ${this.name}, ваш перелкладач.`;
+//     }
+// };
+
+// function showGreeting(callback) {
+//     const message = callback();
+//     console.log(message);
+// }
+
+// showGreeting(translator.translate.bind(translator));
+
+// 5 --- прототипне наслідування
+
+// Створи обєкт animal з властивістю canBreathe, і на його основі 
+// створи обєкт dog, 
+// який успадковує цю властивість та має свою власну - breed
+
+// const animal = {
+//     canBreathe: "true"
+// };
+
+// const dog = Object.create(animal);
+
+// dog.breed = "Labrador";
+
+// console.log(dog.canBreathe);
+// console.log(dog.hasOwnProperty("caBreathe"));
+// console.log(animal.hasOwnProperty("canBreathe"));
+// console.log(dog.breed);
+
+
+// 6 ---- ланцюжок прототипів
+
+
+// const objC = { c: "objC prop" };
+
+// const objB = Object.create(objC);
+// objB.b = "objB prop";
+
+// const objA = Object.create(objB);
+// objA.a = "objA prop";
+
+// console.log(objA); // { a: "objA prop", [[Prototype]]: objB }
+// console.log(objB); // { b: "objB prop", [[Prototype]]: objC }
+// console.log(objC); // { c: "objC prop", [[Prototype]]: Object }
+
+
+// 7 --- побудуй правильний прототипний ланцюг
+
+// Створи обєкт grandparent, parent, child, 
+// щоб вони були повязані в ланцюг прототипів в такому порядку:
+// grandparent -> parent -> child
+
+
+// const grandparent = {
+//     origin: "Ukraine"
+// };
+
+// const parent = Object.create(grandparent);
+// parent.lastName = "Kovalenko";
+
+// const child = Object.create(parent);
+// child.nickname = "Kolia";
+
+
+// console.log(grandparent.isPrototypeOf(parent));
+// console.log(parent.isPrototypeOf(child));
+// console.log(grandparent.isPrototypeOf(child));
+// console.log(child.hasOwnProperty('nickname'));
+// console.log(parent.hasOwnProperty('lastName'));
+// console.log(grandparent.hasOwnProperty('origin'));
+
+
+// 8 --- створення класу і його екземпляра
+
+// class User {
+//     // Тіло класу
+//   }
+  
+//   const mango = new User();
+//   console.log(mango); // {}
+  
+//   const poly = new User();
+//   console.log(poly); // {}
+  
+
+
+
+
+
+

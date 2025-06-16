@@ -130,6 +130,25 @@
 
 
 
+// 10 --- Дано масив чисел [1, 2, 3, 4, 5]. 
+// Застосуйте метод для обчислення суми елементів масиву.
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const sumNumbers = [1, 2, 3, 4, 5].reduce((previousValue, num) => {
+//    return previousValue + num;
+//  }, 0);
+
+// console.log(sumNumbers);
+
+
+
+
+
+
+
+
+
 
 
  // 11 --- Розроби клас Calculator, який дозволяє виконувати арифметичні
@@ -159,47 +178,48 @@
 
 // Приклад використання:
 
-class Calculator {
+// class Calculator {
 
- number(value) {
-   this.total = value; 
-   return this;
- }
+//  number(value) {
+//    this.total = value; 
+//    return this;
+//  }
 
- add(value) {
-    this.total += value;
- }
+//  add(value) {
+//     this.total += value;
+//  }
 
- getResult() {
-    return this.total;
- }
+//  getResult() {
+//     return this.total;
+//  }
 
- divide(value) {
-    if (value !== 0) {
-        this.total /= value;
-       return this;
-    } else {
-    return
- }
- return this;
-}
-}
+//  divide(value) {
+//     if (value !== 0) {
+//         this.total /= value;
+//        return this;
+//     } else {
+//     return
+//  }
+//  return this;
+// }
+// }
 
-const calc = new Calculator();
-console.log(calc.number(10));
-
-
+// const calc = new Calculator();
+// console.log(calc.number(10));
 
 
-const result = calc
-.number(10) // Встановлюємо початкове значення 10
-.add(5)  // Додаємо 5 (10 + 5 = 15)
-.subtract(3) // Віднімаємо 3 (15 - 3 = 12)
-.multiply(4) // Множимо на 4 (12 * 4 = 48)
-.divide(2)  // Ділимо на 2 (48 / 2 = 24)
-.getResult(); // Отримуємо результат: 24
+
+
+// const result = calc
+// .number(10) // Встановлюємо початкове значення 10
+// .add(5)  // Додаємо 5 (10 + 5 = 15)
+// .subtract(3) // Віднімаємо 3 (15 - 3 = 12)
+// .multiply(4) // Множимо на 4 (12 * 4 = 48)
+// .divide(2)  // Ділимо на 2 (48 / 2 = 24)
+// .getResult(); // Отримуємо результат: 24
 
 
 // console.log(result); // 24
+
 
 
