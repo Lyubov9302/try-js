@@ -271,6 +271,159 @@
 // }
 
 
+// 13 --- рефакторинг 
+// Виконай рефакторинг класу user. 
+// додай до нього приватні властивості name , email, age 
+// Стандартизуй публічний інтерфес класу,
+// замінивши всі прямі доступи на геттери і сеттери
+
+// class User {
+//     #name;
+//     #email;
+//     #age;
+
+//     constructor(params) {
+//         this.#name = params.name;
+//         this.#email = params.email;
+//         this.#age = params.age;
+//     }
+
+//     get name() {
+//         return this.#name;
+//     }
+
+//     set name(newName) {
+//         this.#name = newName;
+//     }
+
+
+//     get email() {
+//         return this.#email;
+//     }
+
+//     set email(newEmail) {
+//         this.#email = newEmail;
+//     }
+
+//     get age() {
+//     return this.#age;
+//     }
+
+//     set age(newAge) {
+//         this.#age = newAge;
+//     }
+// }
+
+
+// 14 --- статичний метод і властивість
+// Клас user та перевірка мінімального віку:
+// 1) створи клас User;
+// 2) додай статичну властивість, яка дорівнює 18
+// 3) додай статичний метод checkAge(age), який:
+// - якщо вік менше minAge повертає
+//  "Access denied: Age is below minimum"
+// - Інакше - повертає "Access granted"
+
+// class User {
+//     static minAge = 18;
+//     age;
+
+//     static checkAge(age) {
+//         if (age < User.minAge) {
+//             return "Access denied: Age is below minimum";
+//         }
+//     return "Access granted";
+//     }
+// }
+
+// console.log(User.checkAge(17));
+// console.log(User.checkAge(26));
+
+
+
+
+
+// 15 --- наслідування класів
+
+// Створи клас Employee, який приймає name та email 
+// створи клас manager, який наслідується від Employee
+// додай до класу manager статичну властивість levels, 
+// яка зберігає обєкт
+
+// class Employee {
+//     name;
+//     email;
+
+// constructo(name, email) {
+//     this.name = name;
+//     this.email = email;
+// }
+
+// get name() {
+//     return this.name;
+// }
+
+// set name(newName) {
+//     this.name = newName;
+// }
+
+// get email() {
+//     return this.email;
+// }
+
+// set email(newEmail) {
+//     this.email = newEmail;
+// }
+// }
+
+// class Manager extends Employee {
+//     static levels = {
+//         JUNIOR: "junior",
+//         MIDDLE: "middle",
+//         SENIOR: "senior"
+//     }
+// }
+
+
+// 16 --- дочірні класи / списки дозволених дій
+
+// 1) створи клас Moderator,  який приймає обєкт params у конструкторі
+// з полями email і allowedActions
+// 2)  додай публічну властивість allowedActions - масив з діями
+// наприклад ["delete", "edit"];
+// 3) додай публічний метод allow(action) - 
+// додає дію до списку allowedActions,
+// якщо її немає
+// 4) додай метод canPerform(action) - поевртає true, якщо дія є 
+// в масиві, якщо нема -false.
+
+
+// class Moderator {
+//     constructor(params) {
+//         this.email = params.email;
+//         this.allowedActions = [];
+//     }
+
+//     allow(action) {
+//        if  (!this.allowedActions.includes(action)) {
+//         this.allowedActions.push(action);
+//        }
+//     }
+     
+//     canPerform(action) {
+//         return this.allowedActions.includes(action) 
+    
+//         }
+//     }
+
+
+
+
+
+
+
+
+
 
 
 
