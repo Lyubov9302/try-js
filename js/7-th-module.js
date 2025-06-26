@@ -104,3 +104,157 @@
 
 //     isGuest = !isGuest;
 // })
+
+
+// 7 -- список улюблених книг
+
+// Модифікуй код так, щоб у кожному li було не лише імя книги, а й автор
+
+// const books = [
+//     { title: "1984", author: "George Orwell" },
+//     { title: "To Kill a Mockingbird", author: "Harper Lee" },
+//     { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
+//     { title: "The Catcher in the Rye", author: "J.D. Salinger" },
+//     { title: "Brave New World", author: "Aldous Huxley" }
+//   ];
+  
+//   const bookList = document.querySelector(".book-list");
+  
+//   // Створення HTML-рядків із масиву
+//   const markup = books
+//     .map(book => `<li>${book.title} by ${book.author}</li>`)
+//     .join(""); // З'єднуємо масив у суцільний рядок
+  
+//   bookList.innerHTML = markup;
+
+
+
+// 8 --- створи масив обєктів movies, 
+// де кожен обєкт має title, director, year.
+// потім за допомогою map згенеруй html-розмітку у вигляді li,
+// де буде назва фільму, режисер і рік 
+
+
+// const movies = [
+//     { title: "Inception", director: "Christopher Nolan", year: 2010 },
+//     { title: "Parasite", director: "Bong Joon-ho", year: 2019 },
+//     { title: "The Matrix", director: "Lana & Lilly Wachowski", year: 1999 },
+//     { title: "Pulp Fiction", director: "Quentin Tarantino", year: 1994 },
+//     { title: "Spirited Away", director: "Hayao Miyazaki", year: 2001 }
+//   ];
+  
+//   const movieList = document.querySelector(".movie-list");
+  
+//   const markup = movies
+//   .filter( movie => movie.year > 2000)
+//     .map(movie => `<li>"${movie.title}" (${movie.year}), directed by ${movie.director}</li>`)
+//     .join("");
+  
+//   movieList.innerHTML = markup;
+
+
+// 9 --- вправа на addEventListener
+
+// Зміна кольору при натисканні кнопки
+// Напиши скрипт, який змінює колір тексту в заголовку h1
+// при натисканні на кнопку. Колір має вибиратисч випадково з масиву
+
+// const button = document.querySelector("#color-btn");
+
+// const title = document.querySelector("#main-title");
+
+// const colors = ['red', 'green', 'blue', 'orange', 'crimson'];
+
+// button.addEventListener('click', () => {
+//  const randomColor = colors[Math.floor(Math.random() * colors.length)]
+//  title.style.color = randomColor;
+// });
+
+// 10 --- обєкт подіі і властивості обєкта події
+ 
+
+// const button = document.querySelector(".btn");
+
+// const handleClick = (event) => {
+//   console.log("event: ", event);
+//   console.log("event type: ", event.type);
+//   console.log("currentTarget: ", event.currentTarget);
+// };
+
+// button.addEventListener("click", handleClick);
+
+// 11 -- коли користувач вибирає мову зі списку -
+//  текст під ним змінюється відповідно до вибору
+
+//  const select = document.getElementById('language');
+// const output = document.getElementById('output');
+
+// select.addEventListener('change', () => {
+//   const selectedValue = select.value;
+//   output.textContent = `Ваша мова: ${selectedValue}`;
+// });
+
+
+// 12 --- input 
+
+
+// const input = document.getElementById('nameInput');
+// const preview = document.getElementById('preview');
+
+// input.addEventListener('input', () => {
+//   preview.textContent = `Попередній перегляд: ${input.value}`;
+// });
+
+
+// 13 --- 
+// підрахунок кількості постів у підрозділах
+
+// Завдання: у тебе є список блогів. напиши скрипт, який:
+// 1) знайде всі розділи (section.post-category);
+// 2)порахує, скільки таких розділв є;
+// 3) для кожного розділу:
+// - виведе назву категорії (текст з h3)
+// - виведе кількість постів (кількість article у цьому розділі)
+
+// const mainRozdil = document.querySelector("#blog");
+// const findRozdil = mainRozdil.querySelectorAll(".post-category");
+
+// console.log(`Number of rozdils: ${findRozdil.length}`);
+
+// findRozdil.forEach(rozdil => {
+//     const title = rozdil.querySelector("h3").textContent;
+//     const numberOfArticles = rozdil.querySelectorAll("article").length;
+
+
+// console.log(`Category: ${title}`);
+// console.log(`Articles: ${numberOfArticles}`);
+// });
+
+
+// 14 ---
+// Фільтрація постів за категорією
+
+// 1)є список категорій
+// 2) є список усіх постів ( усі в оному місці, з дата category)
+// 3) при виборі категорії - на екрані показуються тільки пости цієї категорії
+
+const categoryButtons = document.querySelectorAll('#filters button');
+const posts = document.querySelectorAll('#posts article');
+
+categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const selectedCategory = button.dataset.category;
+
+   posts.forEach(post => {
+    const postCategory = post.dataset.category;
+
+    if (selectedCategory === 'all' || postCategory === selectedCategory) {
+        post.style.display = 'block';
+    } else {
+        post.style.display = 'none';
+    }
+   });
+    });
+});
+
+ 
