@@ -238,23 +238,23 @@
 // 2) є список усіх постів ( усі в оному місці, з дата category)
 // 3) при виборі категорії - на екрані показуються тільки пости цієї категорії
 
-const categoryButtons = document.querySelectorAll('#filters button');
-const posts = document.querySelectorAll('#posts article');
+// const categoryButtons = document.querySelectorAll('#filters button');
+// const posts = document.querySelectorAll('#posts article');
 
-categoryButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const selectedCategory = button.dataset.category;
+// categoryButtons.forEach(button => {
+//     button.addEventListener('click', () => {
+//         const selectedCategory = button.dataset.category;
 
-   posts.forEach(post => {
-    const postCategory = post.dataset.category;
+//    posts.forEach(post => {
+//     const postCategory = post.dataset.category;
 
-    if (selectedCategory === 'all' || postCategory === selectedCategory) {
-        post.style.display = 'block';
-    } else {
-        post.style.display = 'none';
-    }
-   });
-    });
-});
+//     if (selectedCategory === 'all' || postCategory === selectedCategory) {
+//         post.style.display = 'block';
+//     } else {
+//         post.style.display = 'none';
+//     }
+//    });
+//     });
+// });
 
  
